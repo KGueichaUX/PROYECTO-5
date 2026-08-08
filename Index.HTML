@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="./CSS/Styles.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Gestor de Tareas</h1>
+
+    <!-- Notificación emergente -->
+    <div id="notification" class="notification hidden"></div>
+
+    <!-- Formulario para agregar tareas -->
+    <form id="task-form" class="form-container">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="Ingrese una tarea" 
+        required 
+        autocomplete="off"
+      >
+      <button type="submit" id="add-btn">Agregar Tarea</button>
+    </form>
+
+    <!-- Indicador de temporizador / feedback -->
+    <div id="countdown-banner" class="countdown-banner"></div>
+
+    <!-- Tabla de tareas -->
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>Tarea</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Fecha Creación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="task-list">
+        <!-- Las tareas se insertan dinámicamente aquí -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Se usa type="module" para soportar import/export -->
+  <script type="module" src="./JS/Script.js"></script>
+</body>
+</html>
